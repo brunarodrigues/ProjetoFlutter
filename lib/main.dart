@@ -1,5 +1,7 @@
 import 'dart:io';
 
+import 'package:envio_imagem/login2.dart';
+import 'login.dart';
 import 'package:envio_imagem/professor/home_professor.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
@@ -25,6 +27,6 @@ void main() async {
   runApp(MaterialApp(
     title: 'Flutter - Storage File',
     debugShowCheckedModeBanner: false,
-    home: HomeProfPage(), //Professor_Home() //MyApp(), //HomePage(),
+    home: Login(), //HomeProfPage(), //Professor_Home() //MyApp(), //HomePage(),
   ));
 }
