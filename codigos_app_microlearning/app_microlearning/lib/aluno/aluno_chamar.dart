@@ -10,6 +10,7 @@ import 'favoritos_aluno.dart';
 import 'configs_aluno.dart';
 import 'favoritos_aluno.dart';
 import 'home_aluno.dart';
+import 'home_atual_aluno.dart';
  
  
 class ChamandHomeAluno extends StatefulWidget {

@@ -1,6 +1,10 @@
 import 'dart:io';
 
 //import 'package:envio_imagem/aluno/aluno_chamar.dart';
+import 'package:envio_imagem/aluno/aluno_chamar.dart';
+import 'package:envio_imagem/aluno/aluno_disciplinas.dart';
+import 'package:envio_imagem/aluno/conteudo.dart';
+import 'package:envio_imagem/aluno/home_aluno.dart';
 import 'package:envio_imagem/chamar_paginas.dart';
 import 'package:envio_imagem/login2.dart';
 import 'login.dart';
@@ -30,6 +34,12 @@ void main() async {
   runApp(MaterialApp(
     title: 'Flutter - Storage File',
     debugShowCheckedModeBanner: false,
-    home: ChamandHome(),//HomeProfPage(), //Professor_Home() //MyApp(), //HomePage(),
+
+//home: conteudo(),
+home: ChamandHomeAluno(),
+//home: Aluno_Disciplinas(),
+
+
+    //home: ChamandHome(),//HomeProfPage(), //Professor_Home() //MyApp(), //HomePage(),
   ));
 }

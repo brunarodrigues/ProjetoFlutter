@@ -1,98 +1,118 @@
 
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
-
-import 'configs_aluno.dart';
-import '../../professor/favoritos_aluno.dart';
  
-class Aluno_Home extends StatefulWidget {
-  const Aluno_Home({ Key? key }) : super(key: key);
+class AlunoHome extends StatefulWidget {
+  const AlunoHome({ Key? key }) : super(key: key);
  
   @override
-  _Aluno_HomeState createState() => _Aluno_HomeState();
+  _AlunoHomeState createState() => _AlunoHomeState();
 }
  
-class _Aluno_HomeState extends State<Aluno_Home> {
+class _AlunoHomeState extends State<AlunoHome> {
   PageController Controller = PageController(initialPage: 0);
   int index = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: Text("Olá, usuário"), actions: [Icon(Icons.more_vert)]),
  
+      body: SafeArea(child: ListView(
  
-     /* appBar: AppBar(
-        title: Text("Aluno"),
- 
-       
-     
-    ),*/
- 
-    /*
-      body: ListView(
-        padding: EdgeInsets.all(8),
-          children: [
-            TextField(
-           
-            decoration: InputDecoration(
-              prefixIcon: Icon(Icons.search),
-              suffixIcon: Icon(Icons.mic),
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.all(
-                  Radius.circular(30),
-                )
-              ),
-              labelStyle: TextStyle(color: Colors.black, fontSize: 18),
-              labelText: 'Pesquise aqui!',
-            ),),
- 
-            ListTile(
-              title: Text('Matemática'),
-              subtitle: Text("Porcentagem"),
-              leading: CircleAvatar(backgroundImage: NetworkImage("https://thumbs.dreamstime.com/z/ilustra%C3%A7%C3%A3o-lisa-redonda-do-vetor-da-matem%C3%A1tica-e-ci%C3%AAncia-113538205.jpg"),),
-              //trailing: Icon(Icons.favorite),),
-              trailing: Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Icon(Icons.favorite_outlined),
-                  Icon(Icons.share),
-                ],
- 
- 
-              ),),
-      */
- 
-   
-       
-        body: PageView(
-          controller: Controller,
         children: [
-          TextField(
-            decoration: InputDecoration(
-              prefixIcon: IconButton(onPressed: (){}, icon: Icon(Icons.search)),
-              suffixIcon: IconButton(onPressed: (){}, icon:Icon(Icons.mic)),
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.all(
-                  Radius.circular(30),
-                )
-              ),
-              labelStyle: TextStyle(color: Colors.black, fontSize: 18),
-              labelText: 'Pesquise aqui!',
- 
- 
- 
-            ),
+          Container(
+            padding: EdgeInsets.all(30),  
+            margin: EdgeInsets.all(20),  
+            height: 200,
+            width: double.infinity,
+            alignment: Alignment.center,  
+            decoration: BoxDecoration(  
+            borderRadius: BorderRadius.circular(8),  
+           boxShadow: [  
+              new BoxShadow(color: Colors.blue, offset: new Offset(6.0, 6.0),),  
+            ],
+          ),  
+          child: Text("Ciências humanas",  
+              style: TextStyle(fontSize: 30)),  
           ),
          
-         
-         
-          Aluno_Favorite(),
-          Aluno_Configuration(),
+          Container(            
+            padding: EdgeInsets.all(30),  
+            margin: EdgeInsets.all(20),  
+            height: 200,
+            width: double.infinity,
+            alignment: Alignment.center,  
+            decoration: BoxDecoration(  
+            borderRadius: BorderRadius.circular(8),  
+            boxShadow: [  
+              new BoxShadow(color: Colors.green, offset: new Offset(6.0, 6.0),),  
+ 
+            ],  
+          ),  
+          child: Text("Ciências da natureza",  
+              style: TextStyle(fontSize: 30)),  
+          ),
+ 
+          Container(
+            padding: EdgeInsets.all(30),  
+            margin: EdgeInsets.all(20),  
+            height: 200,
+            width: double.infinity,
+            alignment: Alignment.center,  
+            decoration: BoxDecoration(  
+            borderRadius: BorderRadius.circular(8),  
+            boxShadow: [  
+              new BoxShadow(color: Colors.purple, offset: new Offset(6.0, 6.0),),  
+            ],  
+          ),  
+          child: Text("Linguagens e códigos",  
+              style: TextStyle(fontSize: 30)),  
+          ),
+          Container(
+            padding: EdgeInsets.all(30),  
+            margin: EdgeInsets.all(20),
+            height: 200,
+            width: double.infinity,  
+            alignment: Alignment.center,  
+            decoration: BoxDecoration(  
+            borderRadius: BorderRadius.circular(8),  
+            boxShadow: [  
+              new BoxShadow(color: Colors.orange, offset: new Offset(6.0, 6.0),),  
+            ],  
+          ),  
+          child: Text("Matemática",  
+              style: TextStyle(fontSize: 30)),  
+          ),
+ 
+          Container(
+            padding: EdgeInsets.all(30),  
+            margin: EdgeInsets.all(20),
+            height: 200,
+            width: double.infinity,  
+            alignment: Alignment.center,  
+            decoration: BoxDecoration(  
+            borderRadius: BorderRadius.circular(8),  
+            boxShadow: [  
+              new BoxShadow(color: Colors.red, offset: new Offset(6.0, 6.0),),  
+            ],  
+          ),  
+          child: Text("Redação ",  
+              style: TextStyle(fontSize: 30)),  
+          ),
+          SizedBox(width: 10,height: 10,),
+ 
+ 
+     
+ 
          
         ],
       ),
          
      
-      bottomNavigationBar: CurvedNavigationBar(
+        ),
+     
+   
+     bottomNavigationBar: CurvedNavigationBar(
         color: Colors.lightBlue,
         buttonBackgroundColor: Colors.lightBlue,
         backgroundColor: Colors.transparent,
@@ -121,10 +141,8 @@ class _Aluno_HomeState extends State<Aluno_Home> {
            
            
         ],
- 
-      ),
-     
-    );
+     ),
+     );
   }
 }
 

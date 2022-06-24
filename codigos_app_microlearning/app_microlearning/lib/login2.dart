@@ -3,6 +3,7 @@ import 'dart:js';
 import 'package:flutter/material.dart';
 
 import 'aluno/home_aluno.dart';
+import 'aluno/home_atual_aluno.dart';
 import 'professor/home_professor.dart';
  
 class Login extends StatefulWidget {

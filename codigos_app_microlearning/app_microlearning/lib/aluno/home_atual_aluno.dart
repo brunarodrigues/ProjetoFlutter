@@ -1,6 +1,7 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+import 'package:envio_imagem/aluno/aluno_disciplinas.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/banco_dados/LoginBD/homepages/alunodisciplina/pageDisciplinas.dart';
+
  
 class Aluno_Home extends StatefulWidget {
   const Aluno_Home({ Key? key }) : super(key: key);
@@ -32,7 +33,7 @@ class _Aluno_HomeState extends State<Aluno_Home> {
               new BoxShadow(color: Colors.red.shade100, offset: new Offset(6.0, 6.0),),  
             ],
           ),  
-          child: TextButton(onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=> AlunoDisciplinasPage()),
+          child: TextButton(onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=> Aluno_Disciplinas()),
           );}, child: Text("Ciências humanas",  
               style: TextStyle(fontSize: 30)),  
           )),
@@ -50,7 +51,7 @@ class _Aluno_HomeState extends State<Aluno_Home> {
  
             ],  
           ),  
-          child: TextButton(onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=> AlunoDisciplinasPage()),
+          child: TextButton(onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=> Aluno_Disciplinas()),
           );}, child: Text("Ciencias da Natureza",  
           style: TextStyle(fontSize: 30)),
           ),),
@@ -67,7 +68,7 @@ class _Aluno_HomeState extends State<Aluno_Home> {
               new BoxShadow(color: Colors.purple, offset: new Offset(6.0, 6.0),),  
             ],  
           ),  
-          child: TextButton(onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=> AlunoDisciplinasPage()),
+          child: TextButton(onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=> Aluno_Disciplinas()),
           );}, child: Text("Linguagens e códigos",style: TextStyle(fontSize: 30)), ),),  
          
           Container(
@@ -82,7 +83,7 @@ class _Aluno_HomeState extends State<Aluno_Home> {
               new BoxShadow(color: Colors.orange, offset: new Offset(6.0, 6.0),),  
             ],  
           ),
-          child: TextButton(onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=> AlunoDisciplinasPage()),
+          child: TextButton(onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=> Aluno_Disciplinas()),
           );}, child: Text("Matemática",  style: TextStyle(fontSize: 30)), )),  
          
           Divider(),
@@ -99,7 +100,7 @@ class _Aluno_HomeState extends State<Aluno_Home> {
               new BoxShadow(color: Colors.red, offset: new Offset(6.0, 6.0),),  
             ],  
           ),  
-          child: TextButton(onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=> AlunoDisciplinasPage()),
+          child: TextButton(onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=> Aluno_Disciplinas()),
           );}, child: Text("Redação ",  style: TextStyle(fontSize: 30)),
              ),  
           ),
@@ -137,7 +138,7 @@ class _Aluno_HomeState extends State<Aluno_Home> {
          
      
         ),
-    bottomNavigationBar: CurvedNavigationBar(
+    /*bottomNavigationBar: CurvedNavigationBar(
         color: Colors.lightBlue,
         buttonBackgroundColor: Colors.lightBlue,
         backgroundColor: Colors.transparent,
@@ -166,7 +167,7 @@ class _Aluno_HomeState extends State<Aluno_Home> {
            
            
         ],
-     ),
+     ),*/
      );
   }
 }
